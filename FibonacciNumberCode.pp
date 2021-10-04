@@ -1,25 +1,24 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
- 
-int fibon(int n)
+main()
 {
-    int a = 0, b = 1, c, i;
-    if( n == 0)
-        return a;
-    for(i = 2; i <= n; i++)
-    {
-       c = a + b;
-       a = b;
-       b = c;
-    }
-    return b;
-}
+	int n,a,b,c,i;
+	
+	cout<<"Enter Number : ";
+	cin>>n;
+	
+	a = 0;
+	b = 1; 
+	c = 0;
+	
+ cout<<"Fibonacci Series :  ";
  
-// Driver code
-int main()
-{
-    int n = 7;//let we want seventh fibonacci number
-     
-    cout << fibon(n);
-    return 0;
+	for(i=1; i<=n; i++)
+	{
+		cout<<c<<" ";
+		a = b;
+		b = c;
+		c = a+b;
+	}
+	
 }
